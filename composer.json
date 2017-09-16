@@ -1,0 +1,36 @@
+{
+  "name": "mylukin/ip2city",
+  "description": "ip to city for 17mon.cn",
+  "keywords": [
+    "ip2city",
+    "ip",
+    "city",
+    "17mon"
+  ],
+  "license": "MIT",
+  "require": {
+    "php":">=5.3"
+  },
+  "authors": [
+    {
+      "name": "Lukin",
+      "email": "mylukin@gmail.com"
+    }
+  ],
+  "scripts": {
+      "post-install-cmd": [
+          "php artisan clear-compiled",
+          "php artisan vendor:publish  --provider=MyLukin\\IP2City\\ServiceProvider"
+      ],
+      "post-update-cmd": [
+          "php artisan clear-compiled",
+		  "mkdir -p ./resources/data",
+		  "cp ./vendor/mylukin/ip2city/17monipdb.dat ./resources/data"
+      ]
+  },
+  "autoload": {
+    "psr-4": {
+      "MyLukin\\IP2City\\": "src/"
+    }
+  }
+}
