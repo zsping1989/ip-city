@@ -1,5 +1,5 @@
 {
-  "name": "mylukin/ip2city",
+  "name": "zsping1989/ip2city",
   "description": "ip to city for 17mon.cn",
   "keywords": [
     "ip2city",
@@ -13,8 +13,8 @@
   },
   "authors": [
     {
-      "name": "Lukin",
-      "email": "mylukin@gmail.com"
+      "name": "zhangshiping",
+      "email": "zsping1989@gmail.com"
     }
   ],
   "scripts": {
